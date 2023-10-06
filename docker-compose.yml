@@ -1,0 +1,70 @@
+version: '3'
+services:
+
+  #PHP Service
+  app:
+    container_name: badelly
+    build:
+      context: ./
+      dockerfile: app.dockerfile
+    working_dir: /var/www
+    volumes:
+            - ./:/var/www
+    restart: unless-stopped
+    tty: true
+    networks:
+      - badelly-network
+
+  #Web Server(NGINX)
+  web:
+    container_name: badelly_web
+    build:
+        context: ./
+        dockerfile: web.dockerfile
+    working_dir: /var/www
+    volumes:
+        - ./:/var/www
+    ports:
+        - 8049:80
+    networks:
+      - badelly-network
+
+  #MySQL Service
+  db:
+    container_name: badelly-db
+    image: mariadb
+    restart: unless-stopped
+    tty: true
+    # ports:
+      # - "3306:3306"
+    environment:
+      MYSQL_DATABASE: cms
+      MYSQL_USERNAME: cms
+      MYSQL_PASSWORD: cms
+      MYSQL_ROOT_PASSWORD: cms
+    volumes:
+      - ./dbdata:/var/lib/mysql/
+      # - ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - badelly-network
+
+  phpmyadmin:
+    container_name: badelly_pma
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8082:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=badelly-db
+      - PMA_USER=root
+      - PMA_PASSWORD=cms
+      - MAX_EXECUTION_TIME=3600
+      - UPLOAD_LIMIT=512M
+    networks:
+      - badelly-network
+
+#Docker Networks
+networks:
+  badelly-network:
+    driver: bridge

@@ -1,0 +1,1258 @@
+{
+	"info": {
+		"_postman_id": "bb000bc7-d02f-47c7-ab5e-12fbfe0a50d0",
+		"name": "new badly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26161840",
+		"_collection_link": "https://blue-flare-327730.postman.co/workspace/Team-Workspace~3debed09-072c-4a6b-8206-12e2d6bb9f6f/collection/26161840-bb000bc7-d02f-47c7-ab5e-12fbfe0a50d0?action=share&source=collection_link&creator=26161840"
+	},
+	"item": [
+		{
+			"name": "admin APis",
+			"item": [
+				{
+					"name": "delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/admin/deleteProduct/1",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"admin",
+								"deleteProduct",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "create product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "ZARA",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "ZARA ZARA ZARA ZARA",
+									"type": "text"
+								},
+								{
+									"key": "video",
+									"type": "file",
+									"src": "/D:/ApowerREC/20230708_035400.mp4"
+								},
+								{
+									"key": "image1",
+									"type": "file",
+									"src": "/C:/Users/AlBostan/Pictures/Screenshots/Screenshot (21).png"
+								},
+								{
+									"key": "image2",
+									"type": "file",
+									"src": "/C:/Users/AlBostan/Pictures/Screenshots/Screenshot (26).png"
+								},
+								{
+									"key": "image3",
+									"type": "file",
+									"src": "/D:/images/WhatsApp_Image_2022-12-04_at_1.41.52_PM.jpeg"
+								},
+								{
+									"key": "image4",
+									"type": "file",
+									"src": "/E:/6ZZo9iQq7nBB0jCQ.png"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "subcategory_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "subsubcategory_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/products",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "title updated",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description updated",
+									"type": "text"
+								},
+								{
+									"key": "video",
+									"type": "file",
+									"src": "/D:/images/blog-teen-vogue-daily-mkerr.jpg"
+								},
+								{
+									"key": "image1",
+									"type": "file",
+									"src": "/E:/6ZZo9iQq7nBB0jCQ.png"
+								},
+								{
+									"key": "image2",
+									"type": "file",
+									"src": "/E:/0b68517f6d82dec4a1e24d7c3144faf5.png"
+								},
+								{
+									"key": "image3",
+									"type": "file",
+									"src": "/D:/images/1guide-ultime-bien-porter-acheter-chemise-formelle-homme-selection-isaia.jpg"
+								},
+								{
+									"key": "image4",
+									"type": "file",
+									"src": "/D:/images/260720230307010645645.jpg"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/updateProduct/24",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"updateProduct",
+								"24"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "show Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/showProduct/6",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"showProduct",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/deleteProduct/6",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"deleteProduct",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/allProduct",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"allProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "create category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "wear",
+									"type": "text"
+								},
+								{
+									"key": "subcategory",
+									"value": "t-shrit",
+									"type": "text"
+								},
+								{
+									"key": "subsubcategory",
+									"value": "red",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/admin/createCategory",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"admin",
+								"createCategory"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "cars",
+									"disabled": true
+								},
+								{
+									"key": "subcategory",
+									"value": "bmw",
+									"disabled": true
+								},
+								{
+									"key": "subsubcategory",
+									"value": "x",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}api/category_product/1",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"category_product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/showAllCategory",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"showAllCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search category",
+					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/category_product/2",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"category_product",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search subcategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/subcategory_product/1",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"subcategory_product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search subsubcategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/subsubcategory_product/2",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"subsubcategory_product",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create subcategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "BMW",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/admin/subCategory/1",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"admin",
+								"subCategory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create subusbcategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "black",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/admin/subsubCategory/2?name=black",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"admin",
+								"subsubCategory",
+								"2"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "black"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/admin/deleteCategory/1",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"admin",
+								"deleteCategory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "preposal",
+			"item": [
+				{
+					"name": "add perposal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTE2MWQyMzA5NjJkMDA1MzVkY2UxNWEzODEwN2M2NDc1MTVhNmM0YTMzMGYzZDMyNmViODY2NjdkYWVhODllZjUwMDkzYzFhMDM3OWJiMjUiLCJpYXQiOjE2OTE5MTg3MDEuODYzOTQyLCJuYmYiOjE2OTE5MTg3MDEuODYzOTQzLCJleHAiOjE3MjM1NDExMDEuODU5MTE3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.UR7hAJZfORI7ZEW8GagR7vWw-IYkQ1v2Xbx9g9bhtc36e-YxV9N9ZJXiPm1VlgnQqhXSF-y5FNxa1ry4DZWNpq4Kdmi4WsX8ugLyghRK2r_R-FycV60VSQKBXFh5UiDkth-IUvkkvFroAIC-93emhTWCFcLq7qjbPZVtIMU-AVnZFdHENLYCVR131Wx6ZimoQK3uJMAdCqjOu0polpryhhAj1FSpMljhiK95QkVOByEmucZbHAfUw-pfNvFo-5kbOlKe73gCpUdR7_pMgr8w0AyYtDiy0t7_6Kfj9LdyrEoGjF4arItx07czr4ZJKIeR01p7WzT_Mxz9Bl3KeglWHkwUvxtTOdc-zVjQNaJFHTp5VxjhqDTl1augwt3-qKJdXjsx4DbwWBHHLu5j73VCSpgErw9TF9xr5GIVzpuGz7XrxgrVHxnO7JbTI7gKM6S5wcEjbOMoHHWu4U_AqRgaD6Hfn0x5mcR3RWZ2E4kHYRRyVYyN3Wb76YERhPQn6OY-V7xFdUKZfIwDOceSz6_T6LjM0LKNJoqeg7s9QoridSofCiFuE9VoSIJ_BHXmoUgNhPUilc2qTCwIIPEpT3o_s6XhbXTyL6-x8ox8ZlAbA0cTln3DMmiYH8jboCN5ltrXqwQX9UiHd5JdPoaa5vYCuJ3bFr91rhCV4HVFNGk9Lqs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "to user 1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "iam user 2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/proposal/6",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"proposal",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get preposal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/get_perposal",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"get_perposal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accept preposal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "accept_proposal",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "deny_perposal",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/proposal_status/1",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"proposal_status",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authentecation",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "porposal ",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "sender",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "abdurahmansedeek@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "11111111",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "11111111",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "02148364949",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/register",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "11111111",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "user@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "11111111",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "abdurahmansedeek@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "11111111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/login",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chat",
+			"item": [
+				{
+					"name": "send message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTE2MWQyMzA5NjJkMDA1MzVkY2UxNWEzODEwN2M2NDc1MTVhNmM0YTMzMGYzZDMyNmViODY2NjdkYWVhODllZjUwMDkzYzFhMDM3OWJiMjUiLCJpYXQiOjE2OTE5MTg3MDEuODYzOTQyLCJuYmYiOjE2OTE5MTg3MDEuODYzOTQzLCJleHAiOjE3MjM1NDExMDEuODU5MTE3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.UR7hAJZfORI7ZEW8GagR7vWw-IYkQ1v2Xbx9g9bhtc36e-YxV9N9ZJXiPm1VlgnQqhXSF-y5FNxa1ry4DZWNpq4Kdmi4WsX8ugLyghRK2r_R-FycV60VSQKBXFh5UiDkth-IUvkkvFroAIC-93emhTWCFcLq7qjbPZVtIMU-AVnZFdHENLYCVR131Wx6ZimoQK3uJMAdCqjOu0polpryhhAj1FSpMljhiK95QkVOByEmucZbHAfUw-pfNvFo-5kbOlKe73gCpUdR7_pMgr8w0AyYtDiy0t7_6Kfj9LdyrEoGjF4arItx07czr4ZJKIeR01p7WzT_Mxz9Bl3KeglWHkwUvxtTOdc-zVjQNaJFHTp5VxjhqDTl1augwt3-qKJdXjsx4DbwWBHHLu5j73VCSpgErw9TF9xr5GIVzpuGz7XrxgrVHxnO7JbTI7gKM6S5wcEjbOMoHHWu4U_AqRgaD6Hfn0x5mcR3RWZ2E4kHYRRyVYyN3Wb76YERhPQn6OY-V7xFdUKZfIwDOceSz6_T6LjM0LKNJoqeg7s9QoridSofCiFuE9VoSIJ_BHXmoUgNhPUilc2qTCwIIPEpT3o_s6XhbXTyL6-x8ox8ZlAbA0cTln3DMmiYH8jboCN5ltrXqwQX9UiHd5JdPoaa5vYCuJ3bFr91rhCV4HVFNGk9Lqs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "a7aaaaaaaaaaaaa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/chat/1",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"chat",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get messages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/chat/2",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"chat",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all chats",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reset password",
+			"item": [
+				{
+					"name": "send code",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/forgetPassword",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"forgetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "new_password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "resetCode",
+									"value": "Iz01U7J",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/resetPassword",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Terms",
+			"item": [
+				{
+					"name": "createTerms",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "terms",
+									"type": "text"
+								},
+								{
+									"key": "child[0][title]",
+									"value": "point 1",
+									"type": "text"
+								},
+								{
+									"key": "child[1][title]",
+									"value": "point 2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/admin/createTerms",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"admin",
+								"createTerms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get terms",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/terms",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"terms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "about",
+			"item": [
+				{
+					"name": "create about",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "title",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/admin/createAbout",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"admin",
+								"createAbout"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show about",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/About",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"About"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlYjRjNzY0ZGYwOTI2OTU5ODI4Mjk5MWExNTc2OGE3ZjFmZjMwZjY1MjE2MGJlMGExZTc4MDVjOTUyZTllNmQ0ODNkNDE3MzgwNjliNWEiLCJpYXQiOjE2OTE1NzU2NTMuNTkzMzY2LCJuYmYiOjE2OTE1NzU2NTMuNTkzMzY4LCJleHAiOjE3MjMxOTgwNTMuNTg0NjU3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.sebWN9_rD8PPVQ-mgAtR73jdKTeLrLG-0pWZg40MHhAlx14OsxVCCLEgSkl1Gtbg36hNmEogstUiziSbQ4m12Vcnmryy-30J0-xaLtIe6nQXc0nPWskhL6Uf39dXcyJX_PJpeToUJcgxnOpxGomS4rVmfqtpIG6_dUJJjt3d1ZCzH1d26Agv1i42t_oCG4kwvJVYY3Elc5gH_WPThOSCbAdha9E8c3JvfC0ehmYM_cnrth9jCiJiMFZQFOsYaE3bYab_CIWXkwaaMe7HhdG3VArVw-t6UtoD8e8aOg9biYER8-ROwIh3ZTrkKXuV8TqzunirTjPywch0GpJjjGyQID7Mwt5QGLaCDe_fY6ip4orO9QZiXhG4m1J3bwSI_0nESj_18dck6Q0xZkrjQF2hNmGvN_haGRt3U-XWIOFSQ4MGaL2TjZgggasuaPSkeQRkO7I-mbWdAwIPu-IszSPH-lNJYZi4RlLh7i6IUOmXVK0wCvGYL0LE4wOL9ScpSSzMBBW30WSOqb2Idz9M-6GjxMVDXnCIPXAvmH71mQqpxxviAl9EYIWMywVJMrjDNFk9UdfmHg2buJSxTbdRvReYdyZuvD_ahmTq8fgntyYBqRCnjtkQ9sjdvTt3kCHJFtxX6gKGbSDG3f3cukHR8OH4EDDMGVNOdbESo-IthBA0zHI",
+			"type": "string"
+		}
+	]
+}
